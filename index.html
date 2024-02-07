@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <div class="wrapper-container">
+        
+        <div class="comp-hand">
+            <div class="comp-hand-animation">
+                <img src="assets\Paper.png" alt="" id="comp-animation">
+            </div>
+        </div>
+        
+        <div class="scorecard">
+            <div class="modal hidden">
+                <h1>DRAW!!!</h1>
+            </div>
+            <div class="score-title">
+                <p>SCORECARD</p>
+            </div>
+            <div class = "left-card">
+                <h1>0</h1>
+            </div>
+            <div class="right-card">
+                <h1>0</h1>
+            </div>
+
+        </div>
+        <div class="player-hand">
+            <div class="player-hand-animation">
+                <img src="assets\Paper.png" alt="" id="player-animation">
+            </div>
+        </div>
+    </div>
+    <div class = "selection-buttons">
+        <button id="rockbtn" class="button-30" role="button">ROCK</button>
+        <button id="paperbtn" class="button-30" role="button">PAPER</button>
+        <button id="scissorbtn" class="button-30" role="button">SCISSOR</button>
+    </div>
+</body>
+</html>

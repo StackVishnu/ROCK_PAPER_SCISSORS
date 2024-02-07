@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;;
+}
+body{
+    margin: 0;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.wrapper-container{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    min-height:90vh;
+  
+}
+
+.comp-hand{
+    width: 30vw;
+    height: 65vh;
+    background-color: black;
+    border-radius: 5%;
+    box-shadow:0px 10px 10px 0px rgb(0,0,0,0.5);
+}
+.scorecard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    width: 15vw;
+    height: 30vh;
+    background-color: black;
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+}
+.modal{
+    display: grid;
+    grid-area: 1/1/3/3;
+    align-items: center;
+    justify-items: center;
+    background-color: bisque;
+    z-index: 3;
+
+}
+.hidden{
+    visibility: hidden;
+}
+.score-title{
+    grid-area : 1/1/2/3 ;
+    justify-content: center;
+}
+.left-card{
+    grid-area: 2/1/3/2;
+    background-color: bisque;
+    border-style: solid;
+    border: 20%;
+    border-color: black;
+    border-radius: 5%;
+
+
+}
+.right-card{
+ grid-area: 2/2/3/-1;
+ background-color: bisque;
+ border-style: solid;
+ border-width: 20%;
+ border-color: black;
+ border-radius: 5%;
+}
+.player-hand{
+
+    width: 30vw;
+    height: 65vh;
+    background-color: black;
+    border-radius: 5%;
+    box-shadow:0px 10px 10px 0px rgb(0,0,0,0.5);
+}
+p{
+    color: antiquewhite;
+}
+.selection-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 10vh;
+    min-height: 10vh;
+    background-color:bisque;
+
+}
+button{
+    margin:1%;
+    
+}
+.popup{
+    animation : popup 0.3s linear forwards;
+
+}
+.shake{
+    animation: horizontal-shaking 1s;
+}
+.popup2{
+    animation: popup2 0.5s linear;
+}
+@keyframes popup {
+    0% {
+        transform: scale(0,0);
+    }
+    33% {
+        transform: scale(0.25,0.25);
+    }
+    66% {
+        transform: scale(0.75,0.75);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+    
+}
+
+@keyframes popup2 {
+    0% {
+        transform: scale(0.10,0.10);
+    }
+    12% {
+        transform: scale(0.40,0.40);
+    }
+    24% {
+        transform: scale(0.75,0.75);
+    }
+    50% {
+        transform: scale(1,1);
+    }
+    66%{
+        transform: scale(0.75,0.75);
+    }
+    75%{
+        transform: scale(0.50,0.50);
+    }
+    88%{
+        transform: scale(0.25,0.25);
+    }
+    100%{
+        transform: scale(0.10,0.10);
+    }
+    
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: skewY(-15deg); }
+    5% { transform: skewY(15deg); }
+    10% { transform: skewY(-15deg); }
+    15% { transform: skewY(15deg); }
+    20% { transform: skewY(0deg); }
+    100% { transform: skewY(0deg); }
+   }
+
+   
+
+   .button-30 {
+     align-items: center;
+     appearance: none;
+     background-color: #FCFCFD;
+     border-radius: 4px;
+     border-width: 0;
+     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+     box-sizing: border-box;
+     color: #36395A;
+     cursor: pointer;
+     display: inline-flex;
+     font-family: "JetBrains Mono",monospace;
+     height: 48px;
+     justify-content: center;
+     line-height: 1;
+     list-style: none;
+     overflow: hidden;
+     padding-left: 16px;
+     padding-right: 16px;
+     position: relative;
+     text-align: left;
+     text-decoration: none;
+     transition: box-shadow .15s,transform .15s;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+     white-space: nowrap;
+     will-change: box-shadow,transform;
+     font-size: 18px;
+   }
+   
+   .button-30:focus {
+     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+   }
+   
+   .button-30:hover {
+     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+     transform: translateY(-2px);
+   }
+   
+   .button-30:active {
+     box-shadow: #D6D6E7 0 3px 7px inset;
+     transform: translateY(2px);
+   }
